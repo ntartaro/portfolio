@@ -52,7 +52,6 @@
   background-image: url('wow.png');
   background-size: contain;
 }
-
 /* Card back side */
 .flip-card-back {
   display: flex;
@@ -61,7 +60,6 @@
   transform: rotateY(180deg);
   position: relative;
 }
-
 /* Frosted image on back side */
 .flip-card-back-frost {
   width: 100%;
@@ -87,7 +85,6 @@
   background-size: contain;
   filter: blur(2px);
 }
-
 /* Back side content wrapper */
 .flip-card-back-content {
   width: 400px;
@@ -98,6 +95,7 @@
   position: relative;
   z-index: 2;
 }
+/* Back top content */
 .flip-card-back-content-top {
   display: flex;
   flex-direction: column;
@@ -107,34 +105,24 @@
   padding: 5px;
   border-radius: 5px;
 }
+/* Back bottom content */
 .flip-card-back-content-bottom {
   margin: 7px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-
-.technologies-used {
-  text-align: left;
-}
-
-.card-links {
-  display: flex;
-}
-.card-links img {
-  width: 20px;
-  height: 20px;
-}
-
+/* Technologies wrapper */
 .technologies {
   width: 200px;
 }
-
+.technologies-used {
+  text-align: left;
+}
 .technologies-list {
   display: flex;
   flex-direction: row;
 }
-
 .technologies-list li {
   background-color: white;
   color: black;
@@ -143,7 +131,10 @@
   font-size: 12px;
   margin: 2px;
 }
-
+/* Link wrapper */
+.card-links {
+  display: flex;
+}
 .link {
   color: white;
   margin: 3px;
@@ -157,8 +148,9 @@
   font-size: 10px;
   transition: color 0.4s ease-in, background-color 0.4s ease-in;
 }
-
 .link-img {
+  width: 20px;
+  height: 20px;
   margin-right: 3px;
   transition: filter 0.4s ease-in;
 }
@@ -167,7 +159,6 @@
   color: black;
   background-color: white;
 }
-
 .link:hover .link-img {
   filter: invert(100%);
 }
