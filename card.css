@@ -1,0 +1,173 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 500px;
+  align-self: center;
+  justify-self: center;
+}
+/* The flip card container */
+.flip-card {
+  margin: 0px 20px;
+  border-radius: 7px;
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+}
+/* This container positions the front and back side */
+.flip-card-inner {
+  border-radius: 7px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.22);
+}
+/* horizontal flip when you mouse over the flip container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Card front side */
+.flip-card-front {
+  border-radius: 7px;
+  background-image: url('hangman.png');
+  background-size: cover;
+}
+.flip-card-front-2 {
+  border-radius: 7px;
+  background-image: url('wow.png');
+  background-size: contain;
+}
+
+/* Card back side */
+.flip-card-back {
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  transform: rotateY(180deg);
+  position: relative;
+}
+
+/* Frosted image on back side */
+.flip-card-back-frost {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 7px;
+  background-image: url('hangman2.png');
+  background-size: contain;
+  filter: blur(2px);
+}
+.flip-card-back-frost-2 {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 7px;
+  background-image: url('wow.png');
+  background-size: contain;
+  filter: blur(2px);
+}
+
+/* Back side content wrapper */
+.flip-card-back-content {
+  width: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+.flip-card-back-content-top {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px;
+  border: solid 0.5px white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.flip-card-back-content-bottom {
+  margin: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.technologies-used {
+  text-align: left;
+}
+
+.card-links {
+  display: flex;
+}
+.card-links img {
+  width: 20px;
+  height: 20px;
+}
+
+.technologies {
+  width: 200px;
+}
+
+.technologies-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.technologies-list li {
+  background-color: white;
+  color: black;
+  border-radius: 2.5px;
+  padding: 2px 4px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+.link {
+  color: white;
+  margin: 3px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 10px;
+  transition: color 0.4s ease-in, background-color 0.4s ease-in;
+}
+
+.link-img {
+  margin-right: 3px;
+  transition: filter 0.4s ease-in;
+}
+
+.link:hover {
+  color: black;
+  background-color: white;
+}
+
+.link:hover .link-img {
+  filter: invert(100%);
+}
