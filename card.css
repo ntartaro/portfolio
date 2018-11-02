@@ -1,5 +1,11 @@
+.is-visible{
+
+}
+
 .cards {
   display: flex;
+  opacity: 0;
+	overflow: hidden;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -7,6 +13,7 @@
   height: 500px;
   align-self: center;
   justify-self: center;
+  transition: opacity 750ms ease-in-out;
 }
 /* The flip card container */
 .flip-card {
