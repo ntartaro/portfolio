@@ -1,11 +1,10 @@
 .cards {
   display: none;
-	overflow: hidden;
+  overflow: hidden;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  /* height: 500px; */
   margin: 150px auto;
   padding: 20px;
   align-self: center;
@@ -58,14 +57,14 @@
   background-image: url('wowback.png');
   background-size: cover;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 .flip-card-front-three {
   border-radius: 7px;
   background-image: url('musicback.jpeg');
   background-size: contain;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 /* Card back side */
 .flip-card-back {
@@ -135,10 +134,10 @@
   padding: 5px;
   border-radius: 5px;
 }
-.flip-card-back-content-top h1{
+.flip-card-back-content-top h1 {
   font-size: 22px;
 }
-.flip-card-back-content-top p{
+.flip-card-back-content-top p {
   margin-top: 8px;
 }
 .flip-card-back-content-top-two {

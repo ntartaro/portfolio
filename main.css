@@ -86,21 +86,30 @@ body {
   align-items: center;
   position: absolute;
   margin: auto;
+  flex-direction: column;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
-  width: 340px;
+  height: 500px;
+}
+
+.frosted-text-wrapper h1 {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 55px;
 }
 
 .frosted-text-wrapper p {
   text-align: center;
   color: #ffffff;
-  text-shadow: 1px 1px rgba(0, 0, 0, .1);
-  margin-top: 0px;
-  font-weight: 400;
-  font-size: 40px;
+  text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  margin-top: 8px;
+  font-weight: 200;
+  font-size: 25px;
 }
 
 .header {
@@ -127,7 +136,6 @@ body {
 .box {
   border-radius: 8px;
   text-align: center;
-  /* border: 1px solid black; */
   margin: 10px;
   padding: 4px 10px;
   color: white;
@@ -163,10 +171,19 @@ body {
 }
 
 .nick-image {
-  margin-top: 200px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.nick-image h1 {
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .nick-image img {
