@@ -45,8 +45,62 @@ table {
 /* --------------------------------------------------- */
 
 body {
-  background-color: teal;
+  background: url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
   font-family: 'Signika', sans-serif;
+}
+
+.frosted-wrapper{
+  opacity: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-top: 2px solid rgba(255, 255, 255, .5);
+  border-bottom: 2px solid rgba(255, 255, 255, .5);
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.frosted-glass {
+  background: url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(13px);
+  position: absolute;
+  height: 500px;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+}
+
+.frosted-text-wrapper {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 340px;
+}
+
+.frosted-text-wrapper p {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  margin-top: 0px;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .header {

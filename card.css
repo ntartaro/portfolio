@@ -1,7 +1,3 @@
-.is-visible{
-
-}
-
 .cards {
   display: flex;
   opacity: 0;
@@ -10,14 +6,16 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 500px;
+  /* height: 500px; */
+  margin: 200px auto;
+  padding: 20px;
   align-self: center;
   justify-self: center;
   transition: opacity 750ms ease-in-out;
 }
 /* The flip card container */
 .flip-card {
-  margin: 0px 20px;
+  margin: 20px 20px;
   border-radius: 7px;
   background-color: transparent;
   width: 400px;
@@ -41,7 +39,9 @@
 }
 /* Position the front and back side */
 .flip-card-front,
-.flip-card-back {
+.flip-card-back,
+.flip-card-front-2,
+.flip-card-front-three {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -56,8 +56,17 @@
 }
 .flip-card-front-2 {
   border-radius: 7px;
-  background-image: url('wow.png');
-  background-size: contain;
+  background-image: url('wowback.png');
+  background-size: cover;
+  height: 100%;
+  width: 100%
+}
+.flip-card-front-three {
+  border-radius: 7px;
+  background-image: url('musictown-front.png');
+  background-size: cover;
+  height: 100%;
+  width: 100%
 }
 /* Card back side */
 .flip-card-back {
@@ -88,8 +97,20 @@
   position: absolute;
   z-index: 1;
   border-radius: 7px;
-  background-image: url('wow.png');
+  background-image: url('wowback.png');
   background-size: contain;
+  filter: blur(2px);
+}
+.flip-card-back-frost-three {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 7px;
+  background-image: url('musicback.jpeg');
+  background-size: cover;
   filter: blur(2px);
 }
 /* Back side content wrapper */
@@ -102,6 +123,7 @@
   position: relative;
   z-index: 2;
 }
+
 /* Back top content */
 .flip-card-back-content-top {
   display: flex;
@@ -109,6 +131,18 @@
   text-align: left;
   margin: 10px;
   border: solid 0.5px white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.flip-card-back-content-top-two {
+  color: black;
+  text-shadow: 1px 1px 4px white;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px;
+  border: solid 0.5px black;
+  box-shadow: 0px 0px 3px white;
   padding: 5px;
   border-radius: 5px;
 }
@@ -121,14 +155,16 @@
 }
 /* Technologies wrapper */
 .technologies {
-  width: 200px;
+  width: 240px;
 }
 .technologies-used {
   text-align: left;
+  text-shadow: 1px 1px 3px black;
 }
 .technologies-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .technologies-list li {
   background-color: white;
@@ -137,6 +173,7 @@
   padding: 2px 4px;
   font-size: 12px;
   margin: 2px;
+  box-shadow: 0px 0px 3px black;
 }
 /* Link wrapper */
 .card-links {
@@ -153,6 +190,7 @@
   border: 1px solid white;
   border-radius: 3px;
   font-size: 10px;
+  box-shadow: 0px 0px 3px black;
   transition: color 0.4s ease-in, background-color 0.4s ease-in;
 }
 .link-img {
