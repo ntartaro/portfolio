@@ -1,13 +1,12 @@
 .cards {
-  display: flex;
-  opacity: 0;
+  display: none;
 	overflow: hidden;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   /* height: 500px; */
-  margin: 200px auto;
+  margin: 150px auto;
   padding: 20px;
   align-self: center;
   justify-self: center;
@@ -63,8 +62,8 @@
 }
 .flip-card-front-three {
   border-radius: 7px;
-  background-image: url('musictown-front.png');
-  background-size: cover;
+  background-image: url('musicback.jpeg');
+  background-size: contain;
   height: 100%;
   width: 100%
 }
@@ -131,8 +130,16 @@
   text-align: left;
   margin: 10px;
   border: solid 0.5px white;
+  text-shadow: 0px 0px 3px black;
+  box-shadow: 0px 0px 2px black;
   padding: 5px;
   border-radius: 5px;
+}
+.flip-card-back-content-top h1{
+  font-size: 22px;
+}
+.flip-card-back-content-top p{
+  margin-top: 8px;
 }
 .flip-card-back-content-top-two {
   color: black;
