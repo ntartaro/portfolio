@@ -5,6 +5,9 @@ homeButton.addEventListener('click', function(e) {
   document.querySelector('.cards').style.display = 'none';
   document.querySelector('.frosted-wrapper').style.opacity = '0';
   document.querySelector('.frosted-text-wrapper').style.opacity = '0';
+  document.querySelector('.frosted-text-wrapper').style.display = 'none';
+  document.querySelector('.frosted-text-wrapper-two').style.opacity = '0';
+  document.querySelector('.frosted-text-wrapper-two').style.display = 'none';
   console.log('clicked');
 });
 
@@ -15,6 +18,9 @@ workButton.addEventListener('click', function(e) {
   document.querySelector('.nick-image').style.display = 'none';
   document.querySelector('.frosted-wrapper').style.opacity = '0';
   document.querySelector('.frosted-text-wrapper').style.opacity = '0';
+  document.querySelector('.frosted-text-wrapper').style.display = 'none';
+  document.querySelector('.frosted-text-wrapper-two').style.opacity = '0';
+  document.querySelector('.frosted-text-wrapper-two').style.display = 'none';
   console.log('clicked');
 });
 
@@ -25,4 +31,19 @@ aboutButton.addEventListener('click', function(e) {
   document.querySelector('.nick-image').style.display = 'none';
   document.querySelector('.frosted-wrapper').style.opacity = '1';
   document.querySelector('.frosted-text-wrapper').style.opacity = '1';
+  document.querySelector('.frosted-text-wrapper').style.display = 'flex';
+  document.querySelector('.frosted-text-wrapper-two').style.opacity = '0';
+  document.querySelector('.frosted-text-wrapper-two').style.display = 'none';
+});
+
+const contactButton = document.querySelector('.contact-button');
+contactButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.querySelector('.cards').style.display = 'none';
+  document.querySelector('.nick-image').style.display = 'none';
+  document.querySelector('.frosted-wrapper').style.opacity = '1';
+  document.querySelector('.frosted-text-wrapper').style.opacity = '0';
+  document.querySelector('.frosted-text-wrapper').style.display = 'none';
+  document.querySelector('.frosted-text-wrapper-two').style.opacity = '1';
+  document.querySelector('.frosted-text-wrapper-two').style.display = 'flex';
 });
