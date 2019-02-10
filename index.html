@@ -4,73 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" type="text/css" href="card.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Signika"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
     <title>Nick Tartaro's Portfolio</title>
   </head>
 
   <body>
-    <div class="frosted-wrapper"><div class="frosted-glass"></div></div>
-
-    <div class="frosted-text-wrapper">
-      <h1>I AM A DEVELOPER</h1>
-      <p>Lover of the outdoors</p>
-      <p>Full-stack software engineer</p>
-      <p>Lifelong native of Washington D.C.</p>
-      <p>Graduate of General Assembly's Web Development Immersive</p>
-    </div>
-
-    <div class="frosted-text-wrapper-two">
-      <a
-        href="mailto:ntartaro@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="email.png" />
-      </a>
-
-      <a
-        href="https://www.github.com/ntartaro"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="github.png" />
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/nick-tartaro/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="linkedin.png" />
-      </a>
-    </div>
-
     <header class="header">
-      <div class="header-left">
-        <div class="box"><p class="home-button">HOME</p></div>
-        <div class="box"><p class="about-button">ABOUT</p></div>
-        <div class="box"><p class="work-button">WORK</p></div>
-        <div class="box"><p class="contact-button">CONTACT</p></div>
-      </div>
-      <div class="header-right">
+      <div class="header-left animated fadeInLeft slow">
         <div class="header-github">
           <a href="https://www.github.com/ntartaro">
             <img src="github.png" target="_blank" rel="noopener noreferrer" />
           </a>
         </div>
       </div>
+      <div class="header-right animated fadeInRight slow">
+        <div class="box"><p class="home-button">HOME</p></div>
+        <div class="box"><p class="about-button">ABOUT</p></div>
+        <div class="box"><p class="work-button">WORK</p></div>
+        <div class="box"><p class="contact-button">CONTACT</p></div>
+      </div>
     </header>
 
-    <div class="blur-line"></div>
-    <div class="nick-image">
-      <h1>Nick Tartaro's Portfolio</h1>
-      <img src="nick.png" />
-    </div>
+    <section class="splash"></section>
 
     <section class="cards">
       <div class="flip-card">
@@ -217,6 +182,304 @@
         </div>
       </div>
     </section>
+
+    <section class="projects">
+      <h1 class="project-title">Work</h1>
+
+      <div class="project-wrapper">
+        <div class="project-content">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front-three"></div>
+              <div class="flip-card-back">
+                <div class="flip-card-back-frost-three"></div>
+                <div class="flip-card-back-content">
+                  <div class="flip-card-back-content-top">
+                    <h1>MusicTown Live</h1>
+                    <p>
+                      Music Town Live is an app where you can find and browse
+                      local music events and buy tickets for them. Users can
+                      search by genre, location, date, etc. for any concert they
+                      are interested in seeing. Mystery tickets will be a future
+                      addition, stay tuned!
+                    </p>
+                  </div>
+                  <div class="flip-card-back-content-bottom">
+                    <div class="technologies">
+                      <p class="technologies-used">Technologies used:</p>
+                      <ul class="technologies-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Firebase</li>
+                      </ul>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com/ntartaro/musictown">
+                        <div class="link">
+                          <img class="link-img" src="github2.png" />
+                          <p>REPO</p>
+                        </div>
+                      </a>
+                      <a href="https://musictownlive.surge.sh">
+                        <div class="link">
+                          <img class="link-img" src="web.png" />
+                          <p>WEBSITE</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              blandit placerat eros in tincidunt. Aliquam molestie, massa sit
+              amet sollicitudin scelerisque, ipsum tellus tempor lectus, a
+              convallis sapien lectus eu enim. Nunc ut tortor purus. Praesent
+              pharetra risus malesuada sem gravida efficitur. Nullam consequat,
+              est eu dictum eleifend, nisl est ultrices purus, sed pretium augue
+              arcu id nisi. Curabitur tincidunt nunc id leo porttitor vehicula.
+              Morbi at quam a libero pellentesque scelerisque.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-wrapper">
+        <div class="project-content">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front-three"></div>
+              <div class="flip-card-back">
+                <div class="flip-card-back-frost-three"></div>
+                <div class="flip-card-back-content">
+                  <div class="flip-card-back-content-top">
+                    <h1>MusicTown Live</h1>
+                    <p>
+                      Music Town Live is an app where you can find and browse
+                      local music events and buy tickets for them. Users can
+                      search by genre, location, date, etc. for any concert they
+                      are interested in seeing. Mystery tickets will be a future
+                      addition, stay tuned!
+                    </p>
+                  </div>
+                  <div class="flip-card-back-content-bottom">
+                    <div class="technologies">
+                      <p class="technologies-used">Technologies used:</p>
+                      <ul class="technologies-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Firebase</li>
+                      </ul>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com/ntartaro/musictown">
+                        <div class="link">
+                          <img class="link-img" src="github2.png" />
+                          <p>REPO</p>
+                        </div>
+                      </a>
+                      <a href="https://musictownlive.surge.sh">
+                        <div class="link">
+                          <img class="link-img" src="web.png" />
+                          <p>WEBSITE</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              blandit placerat eros in tincidunt. Aliquam molestie, massa sit
+              amet sollicitudin scelerisque, ipsum tellus tempor lectus, a
+              convallis sapien lectus eu enim. Nunc ut tortor purus. Praesent
+              pharetra risus malesuada sem gravida efficitur. Nullam consequat,
+              est eu dictum eleifend, nisl est ultrices purus, sed pretium augue
+              arcu id nisi. Curabitur tincidunt nunc id leo porttitor vehicula.
+              Morbi at quam a libero pellentesque scelerisque.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="project-title">Projects</h1>
+
+      <div class="project-wrapper">
+        <div class="project-content">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"></div>
+              <div class="flip-card-back">
+                <div class="flip-card-back-frost"></div>
+                <div class="flip-card-back-content">
+                  <div class="flip-card-back-content-top">
+                    <h1>Hangman</h1>
+                    <p>
+                      The first coding project I ever attempted, made entirely
+                      in vanilla JavaScript. A fully functional version of the
+                      classic game Hangman able to be played either solo or with
+                      two people. Has a random word mode that draws from a
+                      library of over 300,000+ words!
+                    </p>
+                  </div>
+                  <div class="flip-card-back-content-bottom">
+                    <div class="technologies">
+                      <p class="technologies-used">Technologies used:</p>
+                      <ul class="technologies-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                      </ul>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com/ntartaro/hangman">
+                        <div class="link">
+                          <img class="link-img" src="github2.png" />
+                          <p>REPO</p>
+                        </div>
+                      </a>
+                      <a href="https://hangman-ntartaro.herokuapp.com/">
+                        <div class="link">
+                          <img class="link-img" src="web.png" />
+                          <p>WEBSITE</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              blandit placerat eros in tincidunt. Aliquam molestie, massa sit
+              amet sollicitudin scelerisque, ipsum tellus tempor lectus, a
+              convallis sapien lectus eu enim. Nunc ut tortor purus. Praesent
+              pharetra risus malesuada sem gravida efficitur. Nullam consequat,
+              est eu dictum eleifend, nisl est ultrices purus, sed pretium augue
+              arcu id nisi. Curabitur tincidunt nunc id leo porttitor vehicula.
+              Morbi at quam a libero pellentesque scelerisque.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-wrapper">
+        <div class="project-content">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front-2"></div>
+              <div class="flip-card-back">
+                <div class="flip-card-back-frost-2"></div>
+                <div class="flip-card-back-content">
+                  <div class="flip-card-back-content-top">
+                    <h1>Where Over the World is the ISS?</h1>
+                    <p>
+                      An interactive tracker for the International Space Station
+                      that uses the Google Maps API to display the ISS location
+                      in realtime. Users can sign-up and login to create custom
+                      locations and see their current distance to the ISS at any
+                      time.
+                    </p>
+                  </div>
+                  <div class="flip-card-back-content-bottom">
+                    <div class="technologies">
+                      <p class="technologies-used">Technologies used:</p>
+                      <ul class="technologies-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Express</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                      </ul>
+                    </div>
+                    <div class="card-links">
+                      <a
+                        href="https://github.com/ntartaro/iss-tracker-frontend"
+                      >
+                        <div class="link">
+                          <img class="link-img" src="github2.png" />
+                          <p>REPO</p>
+                        </div>
+                      </a>
+                      <a href="https://wow-iss.surge.sh">
+                        <div class="link">
+                          <img class="link-img" src="web.png" />
+                          <p>WEBSITE</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              blandit placerat eros in tincidunt. Aliquam molestie, massa sit
+              amet sollicitudin scelerisque, ipsum tellus tempor lectus, a
+              convallis sapien lectus eu enim. Nunc ut tortor purus. Praesent
+              pharetra risus malesuada sem gravida efficitur. Nullam consequat,
+              est eu dictum eleifend, nisl est ultrices purus, sed pretium augue
+              arcu id nisi. Curabitur tincidunt nunc id leo porttitor vehicula.
+              Morbi at quam a libero pellentesque scelerisque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-me">
+      <div>
+        <img class="nick-image" src="nick.png" />
+        <div></div>
+      </div>
+    </section>
+
+    <footer class="footer-wrapper">
+      <div class="footer-content">
+        <a
+          href="mailto:ntartaro@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="email.png" />
+        </a>
+
+        <a
+          href="https://www.github.com/ntartaro"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="github.png" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/nick-tartaro/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="linkedin.png" />
+        </a>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2019 Nick Tartaro. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
   <script src="index.js"></script>
 </html>
