@@ -22,6 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 20px;
 }
 
 .box {
@@ -31,9 +32,9 @@ body {
   padding: 4px 10px;
   color: white;
   text-shadow: 1px 1px 3px #171717;
-  transition: background-color 0.4s ease-in, color 0.4s ease-in;
+  transition: all 0.4s ease-in;
   cursor: pointer;
-  user-select: none;
+  /* user-select: none; */
   font-size: 20px;
 }
 
@@ -41,23 +42,24 @@ body {
   margin-left: 30px;
 }
 
-.header-resume  {
+.header-resume {
   text-decoration: none;
   color: #ffffff;
   font-size: 50px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
-  transition: all 0.1s ease-in-out;
+  /* transition: all 0.1s ease-in-out; */
   margin-right: 15px;
 }
 
 .resume-text {
-  font-size: 20px;
+  display: none;
+  font-size: 22px;
   color: #ffffff;
 }
 
-.header-github i:hover {
+/* .header-github i:hover {
   filter: invert(100%);
-}
+} */
 
 .box:hover {
   background-color: #ffffff;
@@ -111,12 +113,54 @@ body {
 /* -------------------------PROJECTS-------------------------- */
 
 .projects {
+  /* , #23a6d5, #23d5ab) */
   /* background: linear-gradient(-45deg, rgb(252, 191, 25), rgb(255, 72, 163)); */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #ee7751, #e73c7d);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .project-title {
