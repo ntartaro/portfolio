@@ -19,13 +19,19 @@ let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
   const header = document.querySelector('.header');
+  const resume = document.querySelector('.header-resume');
+  const text = document.querySelector('.resume-text');
   if (currentScrollPos > 0) {
     header.style.backgroundColor = 'rgba(255,255,255,0.5)';
     header.style.boxShadow =
       '0 3px 6px rgba(0,0,0,0.23), 0 3px 6px rgba(0,0,0,0.23)';
+    resume.style.color = '#171717';
+    text.style.color = '#171717';
   } else {
     header.style.backgroundColor = 'transparent';
     header.style.boxShadow = 'none';
+    resume.style.color = '#ffffff';
+    text.style.color = '#ffffff';
   }
   prevScrollPos = currentScrollPos;
 };
@@ -49,7 +55,7 @@ musictown.addEventListener('click', function() {
       function TimerTwo() {
         musicCard.style.transform = 'rotateY(180deg)';
       }
-      setTimeout(TimerTwo, 700);
+      setTimeout(TimerTwo, 1000);
     }
     setTimeout(Timer, 500);
   } else {
@@ -89,7 +95,7 @@ hangman.addEventListener('click', function() {
       function TimerTwo() {
         hangCard.style.transform = 'rotateY(180deg)';
       }
-      setTimeout(TimerTwo, 700);
+      setTimeout(TimerTwo, 1000);
     }
     setTimeout(Timer, 500);
   } else {
@@ -130,7 +136,7 @@ iss.addEventListener('click', function() {
       function TimerTwo() {
         issCard.style.transform = 'rotateY(180deg)';
       }
-      setTimeout(TimerTwo, 700);
+      setTimeout(TimerTwo, 1000);
     }
     setTimeout(Timer, 500);
   } else {
@@ -160,7 +166,7 @@ var colors = new Array(
 var step = 0;
 var colorIndices = [0, 1, 2, 3];
 //transition speed
-var gradientSpeed = 0.003;
+var gradientSpeed = 0.001;
 
 function updateGradient() {
   if ($ === undefined) return;
@@ -210,4 +216,4 @@ function updateGradient() {
   }
 }
 
-setInterval(updateGradient, 10);
+setInterval(updateGradient, 20);
