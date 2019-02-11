@@ -1,24 +1,19 @@
-const homeButton = document.querySelector('.home-button');
-homeButton.addEventListener('click', function(e) {
-  e.preventDefault();
-  console.log('clicked');
-});
+// const homeButton = document.querySelector('.home-button');
+// homeButton.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   console.log('clicked');
+// });
 
-const workButton = document.querySelector('.work-button');
-workButton.addEventListener('click', function(e) {
-  e.preventDefault();
-  console.log('clicked');
-});
+// const projectsButton = document.querySelector('.projects-button');
+// projectsButton.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   console.log('clicked');
+// });
 
-const aboutButton = document.querySelector('.about-button');
-aboutButton.addEventListener('click', function(e) {
-  e.preventDefault();
-});
-
-const contactButton = document.querySelector('.contact-button');
-contactButton.addEventListener('click', function(e) {
-  e.preventDefault();
-});
+// const contactButton = document.querySelector('.contact-button');
+// contactButton.addEventListener('click', function(e) {
+//   e.preventDefault();
+// });
 
 let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
@@ -34,3 +29,25 @@ window.onscroll = () => {
   }
   prevScrollPos = currentScrollPos;
 };
+
+var element = document.querySelector('.project-content');
+var change = document.querySelector('.project-text');
+
+function Timer() {
+  change.style.display = 'none';
+  console.log('Hey');
+}
+
+element.addEventListener('mouseenter', function() {
+  change.classList.remove('animated', 'fadeOutRight');
+  change.classList.add('animated', 'fadeInRight');
+  change.style.display = 'flex';
+  console.log('Event triggered');
+});
+
+element.addEventListener('mouseleave', function() {
+  change.classList.remove('animated', 'fadeInRight');
+  change.classList.add('animated', 'fadeOutRight');
+  setTimeout(Timer, 700);
+  console.log('Event triggered');
+});
