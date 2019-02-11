@@ -51,7 +51,7 @@ body {
 
 .header-github img {
   width: 50px;
-  filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(0px 0px 5px #eee);
   transition: filter 0.4s ease-in;
 }
 
@@ -60,16 +60,20 @@ body {
 }
 
 .box:hover {
-  background-color: white;
+  background-color: #eee;
   color: black;
 }
 
 /* --------------------------------------------------- */
 
+.about-me {
+
+}
+
 .nick-image {
   border-radius: 50%;
   width: 450px;
-  border: 3px solid white;
+  border: 3px solid #eee;
   box-shadow: 0px 0px 4px black;
   margin: 20px;
 }
@@ -77,7 +81,7 @@ body {
 /* --------------------------------------------------- */
 
 .splash {
-  height: 95vh;
+  height: 100vh;
   background-image: url(background.jpg);
   background-size: cover;
 }
@@ -85,18 +89,18 @@ body {
 /* --------------------------------------------------- */
 
 .projects {
-  background: linear-gradient(-45deg,rgb(50, 173, 255),rgb(53, 51, 153));
-  margin-top: 0px;
+  background: linear-gradient(-45deg, rgb(255, 190, 50), rgb(255, 101, 234));
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   align-items: center;
 }
 
 .project-title {
-  font-size: 55px;
-  margin-top: 30px;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  font-size: 60px;
+  margin: 20px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .project-image {
   width: 800px;
@@ -104,82 +108,80 @@ body {
 
 .project-content {
   display: flex;
-  justify-content: space-between;
-  padding: 5px;
-  margin: 30px 100px;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px auto;
   border-radius: 10px;
-  transition: all 1s ease-in-out;
-  /* transition: box-shadow 0.4s ease-in-out, width 1s ease-in-out, border 1s ease-in-out; */
+  transition: all 1s ease-in;
   width: 500px;
 }
 
-.project-content:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 3px 6px rgba(0,0,0,0.23);
-  border: .5px solid rgba(0, 0, 0, 0.2);
-  width: 1000px;
+.music-text, .hang-text, .iss-text {
+  display: none;
 }
-.project-content:hover .project-text {
-  display: flex;
-}
-
 .project-text {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   color: black;
-  padding: 40px;
-  transition: display 1s ease-in-out;
+  padding: 20px;
+  transition: display 1s ease-in;
 }
 
 .project-text h1 {
   font-size: 30px;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
 }
 
 .project-text p {
   font-size: 18px;
   padding-right: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
 }
 
 /* Technologies wrapper */
-.technologies {
-
-}
-
 .technologies-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .technologies-list li {
-  background-color: white;
+  background-color: #eee;
   color: black;
   border-radius: 2.5px;
-  padding: 3px 5px;
+  padding: 4px 7.5px;
   font-size: 20px;
   margin: 5px;
   margin-top: 10px;
-  box-shadow: 0px 0px 3px black;
+  box-shadow: 0px 2px 4px black;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+
 /* Link wrapper */
 .card-links {
   display: flex;
 }
+
 .link {
-  color: white;
+  color: #eee;
   margin: 5px;
   margin-top: 10px;
+  margin-right: 10px;
   padding: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  border: 1px solid white;
+  border: 1px solid #eee;
   border-radius: 3px;
   font-size: 20px;
-  box-shadow: 0px 0px 3px black;
+  box-shadow: 0px 2px 4px black;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: color 0.4s ease-in, background-color 0.4s ease-in;
 }
+
 .link-img {
   width: 30px;
   height: 30px;
@@ -189,7 +191,7 @@ body {
 
 .link:hover {
   color: black;
-  background-color: white;
+  background-color: #eee;
 }
 .link:hover .link-img {
   filter: invert(100%);
@@ -221,7 +223,7 @@ body {
 .footer-content img {
   width: 60px;
   margin: 0px 80px;
-  filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(0px 0px 5px #eee);
   transition: filter 1s ease-in;
 }
 
@@ -230,5 +232,5 @@ body {
 }
 
 .copyright p {
-  color: white;
+  color: #eee;
 }

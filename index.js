@@ -30,24 +30,122 @@ window.onscroll = () => {
   prevScrollPos = currentScrollPos;
 };
 
-var element = document.querySelector('.project-content');
-var change = document.querySelector('.project-text');
+//MusicTown Functions
+var musictown = document.querySelector('.musictown');
+var musicText = document.querySelector('.music-text');
+var musicCard = document.querySelector('.music-card');
 
-function Timer() {
-  change.style.display = 'none';
-  console.log('Hey');
-}
+musictown.addEventListener('click', function() {
+  if (musicText.style.display == 'none' || musicText.style.display == '') {
+    musictown.style.justifyContent = 'space-between';
+    musictown.style.boxShadow =
+      '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
+    musictown.style.width = '1000px';
 
-element.addEventListener('mouseenter', function() {
-  change.classList.remove('animated', 'fadeOutRight');
-  change.classList.add('animated', 'fadeInRight');
-  change.style.display = 'flex';
-  console.log('Event triggered');
+    function Timer() {
+      musicText.classList.remove('animated', 'fadeOutRight');
+      musicText.style.display = 'flex';
+      musicText.classList.add('animated', 'fadeInRight');
+      function TimerTwo() {
+        musicCard.style.transform = 'rotateY(180deg)';
+      }
+      setTimeout(TimerTwo, 700);
+    }
+    setTimeout(Timer, 500);
+  } else {
+    musicText.classList.remove('animated', 'fadeInRight');
+    musicText.classList.add('animated', 'fadeOutRight');
+    function Timer() {
+      musicText.style.display = 'none';
+      musictown.style.boxShadow = 'none';
+      musictown.style.width = '500px';
+      musicCard.style.transform = 'rotateY(360deg)';
+
+      function TimerTwo() {
+        musictown.style.justifyContent = 'center';
+      }
+      setTimeout(TimerTwo, 1050);
+    }
+    setTimeout(Timer, 500);
+  }
 });
 
-element.addEventListener('mouseleave', function() {
-  change.classList.remove('animated', 'fadeInRight');
-  change.classList.add('animated', 'fadeOutRight');
-  setTimeout(Timer, 700);
-  console.log('Event triggered');
+// Hangman Functions
+var hangman = document.querySelector('.hangman');
+var hangText = document.querySelector('.hang-text');
+var hangCard = document.querySelector('.hang-card');
+
+hangman.addEventListener('click', function() {
+  if (hangText.style.display == 'none' || hangText.style.display == '') {
+    hangman.style.justifyContent = 'space-between';
+    hangman.style.boxShadow =
+      '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
+    hangman.style.width = '1000px';
+
+    function Timer() {
+      hangText.classList.remove('animated', 'fadeOutRight');
+      hangText.style.display = 'flex';
+      hangText.classList.add('animated', 'fadeInRight');
+      function TimerTwo() {
+        hangCard.style.transform = 'rotateY(180deg)';
+      }
+      setTimeout(TimerTwo, 700);
+    }
+    setTimeout(Timer, 500);
+  } else {
+    hangText.classList.remove('animated', 'fadeInRight');
+    hangText.classList.add('animated', 'fadeOutRight');
+    function Timer() {
+      hangText.style.display = 'none';
+      hangman.style.boxShadow = 'none';
+      hangman.style.width = '500px';
+      hangCard.style.transform = 'rotateY(360deg)';
+
+      function TimerTwo() {
+        hangman.style.justifyContent = 'center';
+      }
+      setTimeout(TimerTwo, 1050);
+    }
+    setTimeout(Timer, 500);
+  }
+});
+
+//ISS Functions
+var iss = document.querySelector('.iss');
+var issText = document.querySelector('.iss-text');
+var issCard = document.querySelector('.iss-card');
+
+iss.addEventListener('click', function() {
+  if (issText.style.display == 'none' || issText.style.display == '') {
+    iss.style.justifyContent = 'space-between';
+    iss.style.boxShadow =
+      '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
+    iss.style.width = '1000px';
+
+    function Timer() {
+      issText.classList.remove('animated', 'fadeOutRight');
+      issText.style.display = 'flex';
+      issText.classList.add('animated', 'fadeInRight');
+      function TimerTwo() {
+        issCard.style.transform = 'rotateY(180deg)';
+      }
+      setTimeout(TimerTwo, 700);
+    }
+    setTimeout(Timer, 500);
+  } else {
+    issText.classList.remove('animated', 'fadeInRight');
+    issText.classList.add('animated', 'fadeOutRight');
+    function Timer() {
+      issText.style.display = 'none';
+      iss.style.boxShadow = 'none';
+      iss.style.width = '500px';
+      issCard.style.transform = 'rotateY(360deg)';
+
+      function TimerTwo() {
+        iss.style.justifyContent = 'center';
+      }
+      setTimeout(TimerTwo, 1050);
+    }
+    setTimeout(Timer, 500);
+  }
 });

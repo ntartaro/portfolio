@@ -19,9 +19,9 @@
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.22);
 }
 /* horizontal flip when you mouse over the flip container */
-.project-content:hover .flip-card-inner {
+/* .project-content:hover .flip-card-inner {
   transform: rotateY(180deg);
-}
+} */
 
 /* Position the front and back side */
 .flip-card-front,
