@@ -1,19 +1,34 @@
-// const homeButton = document.querySelector('.home-button');
-// homeButton.addEventListener('click', function(e) {
-//   e.preventDefault();
-//   console.log('clicked');
-// });
+const homeButton = document.querySelector('.home-button');
+homeButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  const home = document.querySelector('.splash');
+  home.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
 
-// const projectsButton = document.querySelector('.projects-button');
-// projectsButton.addEventListener('click', function(e) {
-//   e.preventDefault();
-//   console.log('clicked');
-// });
+const projectsButton = document.querySelector('.projects-button');
+projectsButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  const projects = document.querySelector('.projects-anchor');
+  projects.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
 
-// const contactButton = document.querySelector('.contact-button');
-// contactButton.addEventListener('click', function(e) {
-//   e.preventDefault();
-// });
+const contactButton = document.querySelector('.contact-button');
+contactButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  const footer = document.querySelector('.footer-wrapper');
+  footer.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+
+// Header Scroll Functions
 const header = document.querySelector('.header');
 const resume = document.querySelector('.header-resume');
 const text = document.querySelector('.resume-text');
@@ -38,18 +53,19 @@ window.onscroll = () => {
 };
 
 //Resume Functions
-resume.addEventListener('mouseover', function() {
+resume.addEventListener('mouseover', function(e) {
+  e.preventDefault();
   text.style.display = 'flex';
   text.classList.add('animated', 'fadeInRight', 'slow');
-
 });
 
 //MusicTown Functions
-var musictown = document.querySelector('.musictown');
-var musicText = document.querySelector('.music-text');
-var musicCard = document.querySelector('.music-card');
+const musictown = document.querySelector('.musictown');
+const musicText = document.querySelector('.music-text');
+const musicCard = document.querySelector('.music-card');
 
-musictown.addEventListener('click', function() {
+musictown.addEventListener('click', function(e) {
+  e.preventDefault();
   if (musicText.style.display == 'none' || musicText.style.display == '') {
     musictown.style.justifyContent = 'space-between';
     musictown.style.boxShadow =
@@ -85,11 +101,12 @@ musictown.addEventListener('click', function() {
 });
 
 // Hangman Functions
-var hangman = document.querySelector('.hangman');
-var hangText = document.querySelector('.hang-text');
-var hangCard = document.querySelector('.hang-card');
+const hangman = document.querySelector('.hangman');
+const hangText = document.querySelector('.hang-text');
+const hangCard = document.querySelector('.hang-card');
 
-hangman.addEventListener('click', function() {
+hangman.addEventListener('click', function(e) {
+  e.preventDefault();
   if (hangText.style.display == 'none' || hangText.style.display == '') {
     hangman.style.justifyContent = 'space-between';
     hangman.style.boxShadow =
@@ -126,11 +143,12 @@ hangman.addEventListener('click', function() {
 });
 
 //ISS Functions
-var iss = document.querySelector('.iss');
-var issText = document.querySelector('.iss-text');
-var issCard = document.querySelector('.iss-card');
+const iss = document.querySelector('.iss');
+const issText = document.querySelector('.iss-text');
+const issCard = document.querySelector('.iss-card');
 
-iss.addEventListener('click', function() {
+iss.addEventListener('click', function(e) {
+  e.preventDefault();
   if (issText.style.display == 'none' || issText.style.display == '') {
     iss.style.justifyContent = 'space-between';
     iss.style.boxShadow =
