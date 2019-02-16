@@ -37,19 +37,19 @@
 /* Card front side */
 .flip-card-front {
   border-radius: 7px;
-  background-image: url('hangman.png');
+  background-image: url('images/hangman.png');
   background-size: cover;
 }
 .flip-card-front-2 {
   border-radius: 7px;
-  background-image: url('wowback.png');
+  background-image: url('images/wowback.png');
   background-size: cover;
   height: 100%;
   width: 100%;
 }
 .flip-card-front-three {
   border-radius: 7px;
-  background-image: url('musicback.jpeg');
+  background-image: url('images/musicback.jpeg');
   background-size: contain;
   height: 100%;
   width: 100%;
@@ -71,7 +71,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 7px;
-  background-image: url('hangman2.png');
+  background-image: url('images/hangman2.png');
   background-size: contain;
   filter: blur(2px);
 }
@@ -83,7 +83,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 7px;
-  background-image: url('wowback.png');
+  background-image: url('images/wowback.png');
   background-size: contain;
   filter: blur(2px);
 }
@@ -95,7 +95,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 7px;
-  background-image: url('musicback.jpeg');
+  background-image: url('images/musicback.jpeg');
   background-size: cover;
   filter: blur(2px);
 }
