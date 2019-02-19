@@ -27,7 +27,8 @@
 .flip-card-front,
 .flip-card-back,
 .flip-card-front-2,
-.flip-card-front-three {
+.flip-card-front-three,
+.flip-card-front-four {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -50,10 +51,18 @@
 .flip-card-front-three {
   border-radius: 7px;
   background-image: url('images/musicback.jpeg');
-  background-size: contain;
+  background-size: 110% 100%;
   height: 100%;
   width: 100%;
 }
+.flip-card-front-four {
+  border-radius: 7px;
+  background-image: url('images/turbofront.png');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
 /* Card back side */
 .flip-card-back {
   display: flex;
@@ -109,7 +118,6 @@
   position: relative;
   z-index: 2;
 }
-
 
 /* ------------------------------------------------------------------ */
 

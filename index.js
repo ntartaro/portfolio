@@ -82,7 +82,14 @@ musictown.addEventListener('click', function(e) {
       setTimeout(TimerTwo, 1000);
     }
     setTimeout(Timer, 500);
+    console.log(e.target.className);
   } else {
+    console.log(e.target.className);
+    if (e.target.className == 'weblink') {
+      var win = window.open('https://musictownlive.surge.sh', '_blank');
+      win.focus();
+      return;
+    }
     musicText.classList.remove('animated', 'fadeInRight');
     musicText.classList.add('animated', 'fadeOutRight');
     function Timer() {
@@ -93,6 +100,52 @@ musictown.addEventListener('click', function(e) {
 
       function TimerTwo() {
         musictown.style.justifyContent = 'center';
+      }
+      setTimeout(TimerTwo, 1050);
+    }
+    setTimeout(Timer, 500);
+  }
+});
+
+//Turbo Functions
+const turbo = document.querySelector('.turbo');
+const turboText = document.querySelector('.turbo-text');
+const turboCard = document.querySelector('.turbo-card');
+
+turbo.addEventListener('click', function(e) {
+  e.preventDefault();
+  if (turboText.style.display == 'none' || turboText.style.display == '') {
+    turbo.style.justifyContent = 'space-between';
+    turbo.style.boxShadow =
+      '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
+    turbo.style.width = '1000px';
+
+    function Timer() {
+      turboText.classList.remove('animated', 'fadeOutRight');
+      turboText.style.display = 'flex';
+      turboText.classList.add('animated', 'fadeInRight');
+      function TimerTwo() {
+        turboCard.style.transform = 'rotateY(180deg)';
+      }
+      setTimeout(TimerTwo, 1000);
+    }
+    setTimeout(Timer, 500);
+  } else {
+    if (e.target.className == 'weblink') {
+      var win = window.open('https://www.turbo360.co/', '_blank');
+      win.focus();
+      return;
+    }
+    turboText.classList.remove('animated', 'fadeInRight');
+    turboText.classList.add('animated', 'fadeOutRight');
+    function Timer() {
+      turboText.style.display = 'none';
+      turbo.style.boxShadow = 'none';
+      turbo.style.width = '500px';
+      turboCard.style.transform = 'rotateY(360deg)';
+
+      function TimerTwo() {
+        turbo.style.justifyContent = 'center';
       }
       setTimeout(TimerTwo, 1050);
     }
@@ -124,6 +177,19 @@ hangman.addEventListener('click', function(e) {
     }
     setTimeout(Timer, 500);
   } else {
+    if (e.target.className == 'weblink') {
+      var win = window.open(
+        'https://hangman-ntartaro.herokuapp.com/',
+        '_blank'
+      );
+      win.focus();
+      return;
+    }
+    if (e.target.className == 'repolink') {
+      var win = window.open('https://github.com/ntartaro/hangman', '_blank');
+      win.focus();
+      return;
+    }
     hangText.classList.remove('animated', 'fadeInRight');
     hangText.classList.add('animated', 'fadeOutRight');
     function Timer() {
@@ -166,6 +232,19 @@ iss.addEventListener('click', function(e) {
     }
     setTimeout(Timer, 500);
   } else {
+    if (e.target.className == 'weblink') {
+      var win = window.open('https://wow-iss.surge.sh', '_blank');
+      win.focus();
+      return;
+    }
+    if (e.target.className == 'repolink') {
+      var win = window.open(
+        'https://github.com/ntartaro/iss-tracker-frontend',
+        '_blank'
+      );
+      win.focus();
+      return;
+    }
     issText.classList.remove('animated', 'fadeInRight');
     issText.classList.add('animated', 'fadeOutRight');
     function Timer() {
