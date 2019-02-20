@@ -1,3 +1,4 @@
+//Header Nav Buttons
 const homeButton = document.querySelector('.home-button');
 homeButton.addEventListener('click', function(e) {
   e.preventDefault();
@@ -7,7 +8,6 @@ homeButton.addEventListener('click', function(e) {
     block: 'start'
   });
 });
-
 const projectsButton = document.querySelector('.projects-button');
 projectsButton.addEventListener('click', function(e) {
   e.preventDefault();
@@ -17,7 +17,6 @@ projectsButton.addEventListener('click', function(e) {
     block: 'start'
   });
 });
-
 const contactButton = document.querySelector('.contact-button');
 contactButton.addEventListener('click', function(e) {
   e.preventDefault();
@@ -36,7 +35,6 @@ const text = document.querySelector('.resume-text');
 let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
-
   if (currentScrollPos > 0) {
     header.style.backgroundColor = 'rgba(255,255,255,0.5)';
     header.style.boxShadow =
@@ -52,9 +50,12 @@ window.onscroll = () => {
   prevScrollPos = currentScrollPos;
 };
 
-//Resume Functions
+//Resume mouseover
 resume.addEventListener('mouseover', function(e) {
   e.preventDefault();
+  if (window.innerWidth <= '500') {
+    return;
+  }
   text.style.display = 'flex';
   text.classList.add('animated', 'fadeInRight', 'slow');
 });
@@ -76,8 +77,14 @@ musictown.addEventListener('click', function(e) {
       musictown.style.width = '1000px';
     } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
       musictown.style.width = '800px';
-    }  else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
+    } else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
       musictown.style.width = '650px';
+    } else if (window.innerWidth <= '700' && window.innerWidth >= '601') {
+      musictown.style.width = '550px';
+    } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
+      musictown.style.width = '450px';
+    } else if (window.innerWidth <= '500' && window.innerWidth >= '351') {
+      musictown.style.width = '350px';
     }
 
     function Timer() {
@@ -182,13 +189,17 @@ hangman.addEventListener('click', function(e) {
     hangman.style.justifyContent = 'space-between';
     hangman.style.boxShadow =
       '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
-      if (window.innerWidth >= '1101') {
-        hangman.style.width = '1000px';
-      } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
-        hangman.style.width = '800px';
-      }  else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
-        hangman.style.width = '650px';
-      }
+    if (window.innerWidth >= '1101') {
+      hangman.style.width = '1000px';
+    } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
+      hangman.style.width = '800px';
+    } else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
+      hangman.style.width = '650px';
+    } else if (window.innerWidth <= '700' && window.innerWidth >= '601') {
+      hangman.style.width = '550px';
+    } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
+      hangman.style.width = '450px';
+    }
 
     function Timer() {
       hangText.classList.remove('animated', 'fadeOutRight');

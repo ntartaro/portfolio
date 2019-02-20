@@ -373,3 +373,57 @@ body {
     font-size: 17px;
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .technologies-list li {
+    font-size: 14px;
+  }
+  .project-text h1 {
+    font-size: 27px;
+  }
+  .project-text p {
+    font-size: 15px;
+  }
+  .footer-content i {
+    font-size: 35px;
+    margin: 5px 40px;
+  }
+  .box {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .project-content {
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+  }
+  .project-text {
+    width: 420px;
+  }
+  .project-text-top {
+    padding: 20px;
+  }
+  .project-text-bottom {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .box {
+    font-size: 14px;
+  }
+  .header-resume {
+    font-size: 35px;
+  }
+  .header-github {
+    margin-left: 18px;
+  }
+  .project-content {
+    width: 350px;
+  }
+  .project-text {
+    width: 350px;
+  }
+}
