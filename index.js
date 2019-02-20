@@ -98,7 +98,6 @@ musictown.addEventListener('click', function(e) {
         musicText.classList.add('animated', 'fadeInUp');
         musicText.style.display = 'flex';
       }
-      
 
       function TimerTwo() {
         musicCard.style.transform = 'rotateY(180deg)';
@@ -109,7 +108,6 @@ musictown.addEventListener('click', function(e) {
   } else {
     if (
       e.target.className == 'link' ||
-      e.target.className == 'card-links' ||
       e.target.className == 'weblink' ||
       e.target.className == 'link-img'
     ) {
@@ -154,12 +152,31 @@ turbo.addEventListener('click', function(e) {
     turbo.style.justifyContent = 'space-between';
     turbo.style.boxShadow =
       '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
-    turbo.style.width = '1000px';
+    if (window.innerWidth >= '1101') {
+      turbo.style.width = '1000px';
+    } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
+      turbo.style.width = '800px';
+    } else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
+      turbo.style.width = '650px';
+    } else if (window.innerWidth <= '700' && window.innerWidth >= '601') {
+      turbo.style.width = '550px';
+    } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
+      turbo.style.width = '450px';
+    } else if (window.innerWidth <= '500') {
+      turbo.style.width = '320px';
+    }
 
     function Timer() {
-      turboText.classList.remove('animated', 'fadeOutRight');
-      turboText.style.display = 'flex';
-      turboText.classList.add('animated', 'fadeInRight');
+      if (window.innerWidth >= '701') {
+        turboText.classList.remove('animated', 'fadeOutRight');
+        turboText.classList.add('animated', 'fadeInRight');
+        turboText.style.display = 'flex';
+      }
+      if (window.innerWidth <= '700') {
+        turboText.classList.remove('animated', 'fadeOutDown');
+        turboText.classList.add('animated', 'fadeInUp');
+        turboText.style.display = 'flex';
+      }
       function TimerTwo() {
         turboCard.style.transform = 'rotateY(180deg)';
       }
@@ -169,7 +186,6 @@ turbo.addEventListener('click', function(e) {
   } else {
     if (
       e.target.className == 'link' ||
-      e.target.className == 'card-links' ||
       e.target.className == 'weblink' ||
       e.target.className == 'link-img'
     ) {
@@ -177,12 +193,20 @@ turbo.addEventListener('click', function(e) {
       win.focus();
       return;
     }
-    turboText.classList.remove('animated', 'fadeInRight');
-    turboText.classList.add('animated', 'fadeOutRight');
+    if (window.innerWidth >= '701') {
+      turboText.classList.remove('animated', 'fadeInRight');
+      turboText.classList.add('animated', 'fadeOutRight');
+    }
+    if (window.innerWidth <= '700') {
+      turboText.classList.remove('animated', 'fadeInUp');
+      turboText.classList.add('animated', 'fadeOutDown');
+    }
     function Timer() {
       turboText.style.display = 'none';
       turbo.style.boxShadow = 'none';
-      turbo.style.width = '500px';
+      if (window.innerwidth >= 600) {
+        turbo.style.width = '500px';
+      }
       turboCard.style.transform = 'rotateY(360deg)';
 
       function TimerTwo() {
@@ -215,17 +239,21 @@ hangman.addEventListener('click', function(e) {
       hangman.style.width = '550px';
     } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
       hangman.style.width = '450px';
+    } else if (window.innerWidth <= '500') {
+      hangman.style.width = '320px';
     }
 
     function Timer() {
-      console.log(window.innerWidth);
       if (window.innerWidth >= '701') {
         hangText.classList.remove('animated', 'fadeOutRight');
         hangText.classList.add('animated', 'fadeInRight');
+        hangText.style.display = 'flex';
       }
-
-      hangText.style.display = 'flex';
-
+      if (window.innerWidth <= '700') {
+        hangText.classList.remove('animated', 'fadeOutDown');
+        hangText.classList.add('animated', 'fadeInUp');
+        hangText.style.display = 'flex';
+      }
       function TimerTwo() {
         hangCard.style.transform = 'rotateY(180deg)';
       }
@@ -235,7 +263,6 @@ hangman.addEventListener('click', function(e) {
   } else {
     if (
       e.target.className == 'link weblink' ||
-      e.target.className == 'card-links weblink' ||
       e.target.className == 'weblink' ||
       e.target.className == 'link-img weblink'
     ) {
@@ -248,7 +275,6 @@ hangman.addEventListener('click', function(e) {
     }
     if (
       e.target.className == 'link repolink' ||
-      e.target.className == 'card-links repolink' ||
       e.target.className == 'repolink' ||
       e.target.className == 'link-img repolink'
     ) {
@@ -256,12 +282,20 @@ hangman.addEventListener('click', function(e) {
       win.focus();
       return;
     }
-    hangText.classList.remove('animated', 'fadeInRight');
-    hangText.classList.add('animated', 'fadeOutRight');
+    if (window.innerWidth >= '701') {
+      hangText.classList.remove('animated', 'fadeInRight');
+      hangText.classList.add('animated', 'fadeOutRight');
+    }
+    if (window.innerWidth <= '700') {
+      hangText.classList.remove('animated', 'fadeInUp');
+      hangText.classList.add('animated', 'fadeOutDown');
+    }
     function Timer() {
       hangText.style.display = 'none';
       hangman.style.boxShadow = 'none';
-      hangman.style.width = '500px';
+      if (window.innerwidth >= 600) {
+        hangman.style.width = '500px';
+      }
       hangCard.style.transform = 'rotateY(360deg)';
 
       function TimerTwo() {
@@ -285,12 +319,30 @@ iss.addEventListener('click', function(e) {
     iss.style.justifyContent = 'space-between';
     iss.style.boxShadow =
       '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
-    iss.style.width = '1000px';
-
+      if (window.innerWidth >= '1101') {
+        iss.style.width = '1000px';
+      } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
+        iss.style.width = '800px';
+      } else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
+        iss.style.width = '650px';
+      } else if (window.innerWidth <= '700' && window.innerWidth >= '601') {
+        iss.style.width = '550px';
+      } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
+        iss.style.width = '450px';
+      } else if (window.innerWidth <= '500') {
+        iss.style.width = '320px';
+      }
     function Timer() {
-      issText.classList.remove('animated', 'fadeOutRight');
-      issText.style.display = 'flex';
-      issText.classList.add('animated', 'fadeInRight');
+      if (window.innerWidth >= '701') {
+        issText.classList.remove('animated', 'fadeOutRight');
+        issText.classList.add('animated', 'fadeInRight');
+        issText.style.display = 'flex';
+      }
+      if (window.innerWidth <= '700') {
+        issText.classList.remove('animated', 'fadeOutDown');
+        issText.classList.add('animated', 'fadeInUp');
+        issText.style.display = 'flex';
+      }
       function TimerTwo() {
         issCard.style.transform = 'rotateY(180deg)';
       }
@@ -300,7 +352,6 @@ iss.addEventListener('click', function(e) {
   } else {
     if (
       e.target.className == 'link weblink' ||
-      e.target.className == 'card-links weblink' ||
       e.target.className == 'weblink' ||
       e.target.className == 'link-img weblink'
     ) {
@@ -310,7 +361,6 @@ iss.addEventListener('click', function(e) {
     }
     if (
       e.target.className == 'link repolink' ||
-      e.target.className == 'card-links repolink' ||
       e.target.className == 'repolink' ||
       e.target.className == 'link-img repolink'
     ) {
@@ -321,12 +371,20 @@ iss.addEventListener('click', function(e) {
       win.focus();
       return;
     }
-    issText.classList.remove('animated', 'fadeInRight');
-    issText.classList.add('animated', 'fadeOutRight');
+    if (window.innerWidth >= '701') {
+      issText.classList.remove('animated', 'fadeInRight');
+      issText.classList.add('animated', 'fadeOutRight');
+    }
+    if (window.innerWidth <= '700') {
+      issText.classList.remove('animated', 'fadeInUp');
+      issText.classList.add('animated', 'fadeOutDown');
+    }
     function Timer() {
       issText.style.display = 'none';
       iss.style.boxShadow = 'none';
-      iss.style.width = '500px';
+      if (window.innerwidth >= 600) {
+        iss.style.width = '500px';
+      }
       issCard.style.transform = 'rotateY(360deg)';
 
       function TimerTwo() {
