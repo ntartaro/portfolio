@@ -66,11 +66,19 @@ const musicCard = document.querySelector('.music-card');
 
 musictown.addEventListener('click', function(e) {
   e.preventDefault();
+  console.log(window.innerWidth);
   if (musicText.style.display == 'none' || musicText.style.display == '') {
     musictown.style.justifyContent = 'space-between';
     musictown.style.boxShadow =
       '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
-    musictown.style.width = '1000px';
+
+    if (window.innerWidth >= '1101') {
+      musictown.style.width = '1000px';
+    } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
+      musictown.style.width = '800px';
+    }  else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
+      musictown.style.width = '650px';
+    }
 
     function Timer() {
       musicText.classList.remove('animated', 'fadeOutRight');
@@ -85,7 +93,12 @@ musictown.addEventListener('click', function(e) {
     console.log(e.target.className);
   } else {
     console.log(e.target.className);
-    if (e.target.className == 'weblink') {
+    if (
+      e.target.className == 'link' ||
+      e.target.className == 'card-links' ||
+      e.target.className == 'weblink' ||
+      e.target.className == 'link-img'
+    ) {
       var win = window.open('https://musictownlive.surge.sh', '_blank');
       win.focus();
       return;
@@ -131,7 +144,12 @@ turbo.addEventListener('click', function(e) {
     }
     setTimeout(Timer, 500);
   } else {
-    if (e.target.className == 'weblink') {
+    if (
+      e.target.className == 'link' ||
+      e.target.className == 'card-links' ||
+      e.target.className == 'weblink' ||
+      e.target.className == 'link-img'
+    ) {
       var win = window.open('https://www.turbo360.co/', '_blank');
       win.focus();
       return;
@@ -164,7 +182,13 @@ hangman.addEventListener('click', function(e) {
     hangman.style.justifyContent = 'space-between';
     hangman.style.boxShadow =
       '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
-    hangman.style.width = '1000px';
+      if (window.innerWidth >= '1101') {
+        hangman.style.width = '1000px';
+      } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
+        hangman.style.width = '800px';
+      }  else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
+        hangman.style.width = '650px';
+      }
 
     function Timer() {
       hangText.classList.remove('animated', 'fadeOutRight');
@@ -177,7 +201,12 @@ hangman.addEventListener('click', function(e) {
     }
     setTimeout(Timer, 500);
   } else {
-    if (e.target.className == 'weblink') {
+    if (
+      e.target.className == 'link weblink' ||
+      e.target.className == 'card-links weblink' ||
+      e.target.className == 'weblink' ||
+      e.target.className == 'link-img weblink'
+    ) {
       var win = window.open(
         'https://hangman-ntartaro.herokuapp.com/',
         '_blank'
@@ -185,7 +214,12 @@ hangman.addEventListener('click', function(e) {
       win.focus();
       return;
     }
-    if (e.target.className == 'repolink') {
+    if (
+      e.target.className == 'link repolink' ||
+      e.target.className == 'card-links repolink' ||
+      e.target.className == 'repolink' ||
+      e.target.className == 'link-img repolink'
+    ) {
       var win = window.open('https://github.com/ntartaro/hangman', '_blank');
       win.focus();
       return;
@@ -232,12 +266,22 @@ iss.addEventListener('click', function(e) {
     }
     setTimeout(Timer, 500);
   } else {
-    if (e.target.className == 'weblink') {
+    if (
+      e.target.className == 'link weblink' ||
+      e.target.className == 'card-links weblink' ||
+      e.target.className == 'weblink' ||
+      e.target.className == 'link-img weblink'
+    ) {
       var win = window.open('https://wow-iss.surge.sh', '_blank');
       win.focus();
       return;
     }
-    if (e.target.className == 'repolink') {
+    if (
+      e.target.className == 'link repolink' ||
+      e.target.className == 'card-links repolink' ||
+      e.target.className == 'repolink' ||
+      e.target.className == 'link-img repolink'
+    ) {
       var win = window.open(
         'https://github.com/ntartaro/iss-tracker-frontend',
         '_blank'
