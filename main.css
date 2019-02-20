@@ -131,7 +131,7 @@ body {
 
 .projects {
   /* background: linear-gradient(-45deg, rgb(252, 191, 25), rgb(255, 72, 163)); */
-  background: linear-gradient(-45deg, #402517, #895730, #2c261f, #d6c0a8);
+  background: linear-gradient(135deg, rgba(40,133,182,1) 0%, rgba(57,31,21,1) 46%, rgba(57,31,21,1) 74%);
   background-size: 400% 400%;
   /* -webkit-animation: Gradient 10s ease infinite;
   -moz-animation: Gradient 10s ease infinite;
