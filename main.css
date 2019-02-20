@@ -322,7 +322,7 @@ body {
   color: #ffffff;
   font-size: 45px;
   margin: 5px 80px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .footer-content i:hover {
@@ -408,6 +408,13 @@ body {
   .project-text-bottom {
     padding: 10px;
   }
+  .footer-content i {
+    font-size: 35px;
+    margin: 5px 30px;
+  }
+  .header {
+    height: 55px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -420,10 +427,38 @@ body {
   .header-github {
     margin-left: 18px;
   }
+  .splash h1 {
+    font-size: 45px;
+  }
+  .splash h2 {
+    font-size: 35px;
+  }
+  .splash p {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .project-title {
+    font-size: 40px;
+  }
+  .title-line {
+    margin: 15px;
+    border: 2px solid #ffffff;
+    height: 0px;
+    width: 200px;
+  }
+
   .project-content {
-    width: 350px;
+    width: 320px;
   }
   .project-text {
-    width: 350px;
+    width: 320px;
+  }
+  .footer-content i {
+    font-size: 30px;
+    margin: 5px 15px;
+  }
+  .nick-image {
+    width: 300px;
   }
 }

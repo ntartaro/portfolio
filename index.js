@@ -83,23 +83,30 @@ musictown.addEventListener('click', function(e) {
       musictown.style.width = '550px';
     } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
       musictown.style.width = '450px';
-    } else if (window.innerWidth <= '500' && window.innerWidth >= '351') {
-      musictown.style.width = '350px';
+    } else if (window.innerWidth <= '500') {
+      musictown.style.width = '320px';
     }
 
     function Timer() {
-      musicText.classList.remove('animated', 'fadeOutRight');
-      musicText.style.display = 'flex';
-      musicText.classList.add('animated', 'fadeInRight');
+      if (window.innerWidth >= '701') {
+        musicText.classList.remove('animated', 'fadeOutRight');
+        musicText.classList.add('animated', 'fadeInRight');
+        musicText.style.display = 'flex';
+      }
+      if (window.innerWidth <= '700') {
+        musicText.classList.remove('animated', 'fadeOutDown');
+        musicText.classList.add('animated', 'fadeInUp');
+        musicText.style.display = 'flex';
+      }
+      
+
       function TimerTwo() {
         musicCard.style.transform = 'rotateY(180deg)';
       }
       setTimeout(TimerTwo, 1000);
     }
     setTimeout(Timer, 500);
-    console.log(e.target.className);
   } else {
-    console.log(e.target.className);
     if (
       e.target.className == 'link' ||
       e.target.className == 'card-links' ||
@@ -110,12 +117,21 @@ musictown.addEventListener('click', function(e) {
       win.focus();
       return;
     }
-    musicText.classList.remove('animated', 'fadeInRight');
-    musicText.classList.add('animated', 'fadeOutRight');
+    if (window.innerWidth >= '701') {
+      musicText.classList.remove('animated', 'fadeInRight');
+      musicText.classList.add('animated', 'fadeOutRight');
+    }
+    if (window.innerWidth <= '700') {
+      musicText.classList.remove('animated', 'fadeInUp');
+      musicText.classList.add('animated', 'fadeOutDown');
+    }
+
     function Timer() {
       musicText.style.display = 'none';
       musictown.style.boxShadow = 'none';
-      musictown.style.width = '500px';
+      if (window.innerwidth >= 600) {
+        musictown.style.width = '500px';
+      }
       musicCard.style.transform = 'rotateY(360deg)';
 
       function TimerTwo() {
@@ -202,9 +218,14 @@ hangman.addEventListener('click', function(e) {
     }
 
     function Timer() {
-      hangText.classList.remove('animated', 'fadeOutRight');
+      console.log(window.innerWidth);
+      if (window.innerWidth >= '701') {
+        hangText.classList.remove('animated', 'fadeOutRight');
+        hangText.classList.add('animated', 'fadeInRight');
+      }
+
       hangText.style.display = 'flex';
-      hangText.classList.add('animated', 'fadeInRight');
+
       function TimerTwo() {
         hangCard.style.transform = 'rotateY(180deg)';
       }
