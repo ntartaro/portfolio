@@ -99,7 +99,8 @@ musictown.addEventListener('click', function(e) {
       }
 
       function TimerTwo() {
-        musicCard.style.transform = 'rotateY(180deg)';
+        musicCard.style.transform = 'rotateY(180deg)'
+        musicCard.style = '-webkit-transform: rotateY(180deg)';
       }
       setTimeout(TimerTwo, 900);
     }
@@ -130,6 +131,7 @@ musictown.addEventListener('click', function(e) {
         musictown.style.width = '500px';
       }
       musicCard.style.transform = 'rotateY(360deg)';
+      musicCard.style = '-webkit-transform: rotateY(360deg)';
 
       function TimerTwo() {
         musictown.style.justifyContent = 'center';
@@ -178,6 +180,7 @@ turbo.addEventListener('click', function(e) {
       }
       function TimerTwo() {
         turboCard.style.transform = 'rotateY(180deg)';
+        turboCard.style = '-webkit-transform: rotateY(180deg)';
       }
       setTimeout(TimerTwo, 900);
     }
@@ -207,6 +210,7 @@ turbo.addEventListener('click', function(e) {
         turbo.style.width = '500px';
       }
       turboCard.style.transform = 'rotateY(360deg)';
+      turboCard.style = '-webkit-transform: rotateY(360deg)';
 
       function TimerTwo() {
         turbo.style.justifyContent = 'center';
@@ -255,6 +259,7 @@ hangman.addEventListener('click', function(e) {
       }
       function TimerTwo() {
         hangCard.style.transform = 'rotateY(180deg)';
+        hangCard.style = '-webkit-transform: rotateY(180deg)';
       }
       setTimeout(TimerTwo, 900);
     }
@@ -296,6 +301,7 @@ hangman.addEventListener('click', function(e) {
         hangman.style.width = '500px';
       }
       hangCard.style.transform = 'rotateY(360deg)';
+      hangCard.style = '-webkit-transform: rotateY(360deg)';
 
       function TimerTwo() {
         hangman.style.justifyContent = 'center';
@@ -343,6 +349,7 @@ iss.addEventListener('click', function(e) {
       }
       function TimerTwo() {
         issCard.style.transform = 'rotateY(180deg)';
+        issCard.style = '-webkit-transform: rotateY(180deg)';
       }
       setTimeout(TimerTwo, 900);
     }
@@ -384,6 +391,7 @@ iss.addEventListener('click', function(e) {
         iss.style.width = '500px';
       }
       issCard.style.transform = 'rotateY(360deg)';
+      issCard.style = '-webkit-transform: rotateY(360deg)';
 
       function TimerTwo() {
         iss.style.justifyContent = 'center';
