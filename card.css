@@ -6,6 +6,7 @@
   width: 400px;
   height: 400px;
   perspective: 1000px;
+  cursor: pointer;
 }
 /* This container positions the front and back side */
 .flip-card-inner {
@@ -18,15 +19,11 @@
   transform-style: preserve-3d;
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.22);
 }
-/* horizontal flip when you mouse over the flip container */
-/* .project-content:hover .flip-card-inner {
-  transform: rotateY(180deg);
-} */
 
 /* Position the front and back side */
-.flip-card-front,
 .flip-card-back,
-.flip-card-front-2,
+.flip-card-front-one,
+.flip-card-front-two,
 .flip-card-front-three,
 .flip-card-front-four {
   position: absolute;
@@ -36,28 +33,26 @@
 }
 
 /* Card front side */
-.flip-card-front {
+.flip-card-front-one {
   border-radius: 7px;
-  background-image: url('images/hangman.png');
+  background-image: url('images/musicfront.png');
   background-size: cover;
 }
-.flip-card-front-2 {
+.flip-card-front-two {
   border-radius: 7px;
-  background-image: url('images/wowback.png');
+  background-image: url('images/turbofront.png');
   background-size: cover;
   height: 100%;
   width: 100%;
 }
 .flip-card-front-three {
   border-radius: 7px;
-  background-image: url('images/musicback.jpeg');
-  background-size: 110% 100%;
-  height: 100%;
-  width: 100%;
+  background-image: url('images/hangfront.png');
+  background-size: cover;
 }
 .flip-card-front-four {
   border-radius: 7px;
-  background-image: url('images/turbofront.png');
+  background-image: url('images/wowback.png');
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -71,32 +66,9 @@
   transform: rotateY(180deg);
   position: relative;
 }
-/* Frosted image on back side */
-.flip-card-back-frost {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 1;
-  border-radius: 7px;
-  background-image: url('images/hangman2.png');
-  background-size: contain;
-  filter: blur(2px);
-}
-.flip-card-back-frost-2 {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 1;
-  border-radius: 7px;
-  background-image: url('images/wowback.png');
-  background-size: contain;
-  filter: blur(2px);
-}
-.flip-card-back-frost-three {
+/* image on back side */
+
+.flip-card-back-one {
   width: 100%;
   height: 100%;
   top: 0;
@@ -106,12 +78,44 @@
   border-radius: 7px;
   background-image: url('images/musicback.jpeg');
   background-size: cover;
-  filter: blur(2px);
 }
+.flip-card-back-two {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 7px;
+  background-image: url('images/turbofront.png');
+  background-size: cover;
+}
+.flip-card-back-three {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 7px;
+  background-image: url('images/hangvid2.gif');
+  background-size: cover;
+}
+.flip-card-back-four {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 7px;
+  background-image: url('images/wowback.png');
+  background-size: contain;
+}
+
 /* Back side content wrapper */
 .flip-card-back-content {
   width: 400px;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -120,93 +124,6 @@
 }
 
 /* ------------------------------------------------------------------ */
-
-.frosted-wrapper {
-  opacity: 0;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-  height: 400px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.frosted-glass {
-  background: url(background.jpg) no-repeat center center fixed;
-  background-size: cover;
-  overflow: hidden;
-  filter: blur(13px);
-  position: absolute;
-  height: 500px;
-  top: -50px;
-  left: -50px;
-  right: -50px;
-  bottom: -50px;
-}
-
-.frosted-text-wrapper {
-  opacity: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin: auto;
-  flex-direction: column;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 500px;
-}
-
-.frosted-text-wrapper-two {
-  opacity: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin: auto;
-  flex-direction: row;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 500px;
-}
-
-.frosted-text-wrapper-two img {
-  width: 200px;
-  margin: 0px 80px;
-  filter: drop-shadow(0px 0px 5px white);
-  transition: filter 1s ease-in;
-}
-
-.frosted-text-wrapper-two img:hover {
-  filter: invert(100%) drop-shadow(0px 0px 5px black);
-}
-
-.frosted-text-wrapper h1 {
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-  margin-bottom: 30px;
-  font-weight: 400;
-  font-size: 55px;
-}
-
-.frosted-text-wrapper p {
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-  margin-top: 8px;
-  font-weight: 200;
-  font-size: 25px;
-}
 
 @media only screen and (max-width: 1100px) {
   .flip-card {
@@ -235,13 +152,6 @@
     width: 320px;
   }
 }
-
-/* @media only screen and (max-width: 600px) {
-  .flip-card {
-    height: 280px;
-    width: 280px;
-  }
-} */
 
 @media only screen and (max-width: 500px) {
   .flip-card {
