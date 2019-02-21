@@ -220,7 +220,6 @@ turbo.addEventListener('click', function(e) {
       turboCard.style.transform = 'rotateY(360deg)';
       document.querySelector('.flip-card-front-two').style.display = 'flex';
 
-
       function TimerTwo() {
         turbo.style.justifyContent = 'center';
       }
@@ -268,6 +267,11 @@ hangman.addEventListener('click', function(e) {
       }
       function TimerTwo() {
         hangCard.style.transform = 'rotateY(180deg)';
+        function TimerThree() {
+          document.querySelector('.flip-card-front-three').style =
+            'display:none;';
+        }
+        setTimeout(TimerThree, 500);
       }
       setTimeout(TimerTwo, 900);
     }
@@ -311,14 +315,8 @@ hangman.addEventListener('click', function(e) {
       hangCard.style.transform = 'rotateY(360deg)';
       document.querySelector('.flip-card-front-three').style.display = 'flex';
 
-
       function TimerTwo() {
         hangman.style.justifyContent = 'center';
-        function TimerThree() {
-          document.querySelector('.flip-card-front-three').style =
-            'display:none;';
-        }
-        setTimeout(TimerThree, 500);
       }
       setTimeout(TimerTwo, 1050);
     }
@@ -410,8 +408,6 @@ iss.addEventListener('click', function(e) {
       }
       issCard.style.transform = 'rotateY(360deg)';
       document.querySelector('.flip-card-front-four').style.display = 'flex';
-
-
       function TimerTwo() {
         iss.style.justifyContent = 'center';
       }
