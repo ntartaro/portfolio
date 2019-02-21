@@ -99,8 +99,12 @@ musictown.addEventListener('click', function(e) {
       }
 
       function TimerTwo() {
-        musicCard.style.transform = 'rotateY(180deg)'
-        musicCard.style = '-webkit-transform: rotateY(180deg)';
+        musicCard.style.transform = 'rotateY(180deg)';
+        function TimerThree() {
+          document.querySelector('.flip-card-front-one').style =
+            'display:none;';
+        }
+        setTimeout(TimerThree, 500);
       }
       setTimeout(TimerTwo, 900);
     }
@@ -131,7 +135,7 @@ musictown.addEventListener('click', function(e) {
         musictown.style.width = '500px';
       }
       musicCard.style.transform = 'rotateY(360deg)';
-      musicCard.style = '-webkit-transform: rotateY(360deg)';
+      document.querySelector('.flip-card-front-one').style.display = 'flex';
 
       function TimerTwo() {
         musictown.style.justifyContent = 'center';
@@ -180,7 +184,11 @@ turbo.addEventListener('click', function(e) {
       }
       function TimerTwo() {
         turboCard.style.transform = 'rotateY(180deg)';
-        turboCard.style = '-webkit-transform: rotateY(180deg)';
+        function TimerThree() {
+          document.querySelector('.flip-card-front-two').style =
+            'display:none;';
+        }
+        setTimeout(TimerThree, 500);
       }
       setTimeout(TimerTwo, 900);
     }
@@ -210,7 +218,8 @@ turbo.addEventListener('click', function(e) {
         turbo.style.width = '500px';
       }
       turboCard.style.transform = 'rotateY(360deg)';
-      turboCard.style = '-webkit-transform: rotateY(360deg)';
+      document.querySelector('.flip-card-front-two').style.display = 'flex';
+
 
       function TimerTwo() {
         turbo.style.justifyContent = 'center';
@@ -259,7 +268,6 @@ hangman.addEventListener('click', function(e) {
       }
       function TimerTwo() {
         hangCard.style.transform = 'rotateY(180deg)';
-        hangCard.style = '-webkit-transform: rotateY(180deg)';
       }
       setTimeout(TimerTwo, 900);
     }
@@ -301,10 +309,16 @@ hangman.addEventListener('click', function(e) {
         hangman.style.width = '500px';
       }
       hangCard.style.transform = 'rotateY(360deg)';
-      hangCard.style = '-webkit-transform: rotateY(360deg)';
+      document.querySelector('.flip-card-front-three').style.display = 'flex';
+
 
       function TimerTwo() {
         hangman.style.justifyContent = 'center';
+        function TimerThree() {
+          document.querySelector('.flip-card-front-three').style =
+            'display:none;';
+        }
+        setTimeout(TimerThree, 500);
       }
       setTimeout(TimerTwo, 1050);
     }
@@ -349,7 +363,11 @@ iss.addEventListener('click', function(e) {
       }
       function TimerTwo() {
         issCard.style.transform = 'rotateY(180deg)';
-        issCard.style = '-webkit-transform: rotateY(180deg)';
+        function TimerThree() {
+          document.querySelector('.flip-card-front-four').style =
+            'display:none;';
+        }
+        setTimeout(TimerThree, 500);
       }
       setTimeout(TimerTwo, 900);
     }
@@ -391,7 +409,8 @@ iss.addEventListener('click', function(e) {
         iss.style.width = '500px';
       }
       issCard.style.transform = 'rotateY(360deg)';
-      issCard.style = '-webkit-transform: rotateY(360deg)';
+      document.querySelector('.flip-card-front-four').style.display = 'flex';
+
 
       function TimerTwo() {
         iss.style.justifyContent = 'center';
