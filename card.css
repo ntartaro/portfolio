@@ -161,4 +161,10 @@
     height: 280px;
     width: 280px;
   }
+  .flip-card-back-three {
+    background-image: url('images/hangbackalt.png');
+  }
+  .flip-card-back-four {
+    background-image: url('images/wowbackalt.png');
+  }
 }
