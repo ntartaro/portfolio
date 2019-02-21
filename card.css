@@ -76,7 +76,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 7px;
-  background-image: url('images/musicback.jpeg');
+  background-image: url('images/musicback.png');
   background-size: cover;
 }
 .flip-card-back-two {
@@ -87,7 +87,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 7px;
-  background-image: url('images/turbofront.png');
+  background-image: url('images/turboback.png');
   background-size: cover;
 }
 .flip-card-back-three {
@@ -109,8 +109,8 @@
   position: absolute;
   z-index: 1;
   border-radius: 7px;
-  background-image: url('images/wowback.png');
-  background-size: contain;
+  background-image: url('images/wowvid.gif');
+  background-size: 400px 400px;
 }
 
 /* Back side content wrapper */

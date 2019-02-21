@@ -131,7 +131,12 @@ body {
 
 .projects {
   /* background: linear-gradient(-45deg, rgb(252, 191, 25), rgb(255, 72, 163)); */
-  background: linear-gradient(135deg, rgba(40,133,182,1) 0%, rgba(57,31,21,1) 46%, rgba(57,31,21,1) 74%);
+  background: linear-gradient(
+    135deg,
+    rgba(40, 133, 182, 1) 0%,
+    rgba(57, 31, 21, 1) 46%,
+    rgba(57, 31, 21, 1) 74%
+  );
   background-size: 400% 400%;
   display: flex;
   flex-direction: column;
@@ -375,6 +380,9 @@ body {
   }
   .header {
     height: 55px;
+  }
+  .projects-anchor {
+    top: -55px;
   }
 }
 

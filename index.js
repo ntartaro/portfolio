@@ -67,7 +67,6 @@ const musicCard = document.querySelector('.music-card');
 
 musictown.addEventListener('click', function(e) {
   e.preventDefault();
-  console.log(window.innerWidth);
   if (musicText.style.display == 'none' || musicText.style.display == '') {
     musictown.style.justifyContent = 'space-between';
     musictown.style.boxShadow =
@@ -102,7 +101,7 @@ musictown.addEventListener('click', function(e) {
       function TimerTwo() {
         musicCard.style.transform = 'rotateY(180deg)';
       }
-      setTimeout(TimerTwo, 1000);
+      setTimeout(TimerTwo, 900);
     }
     setTimeout(Timer, 500);
   } else {
@@ -180,7 +179,7 @@ turbo.addEventListener('click', function(e) {
       function TimerTwo() {
         turboCard.style.transform = 'rotateY(180deg)';
       }
-      setTimeout(TimerTwo, 1000);
+      setTimeout(TimerTwo, 900);
     }
     setTimeout(Timer, 500);
   } else {
@@ -257,7 +256,7 @@ hangman.addEventListener('click', function(e) {
       function TimerTwo() {
         hangCard.style.transform = 'rotateY(180deg)';
       }
-      setTimeout(TimerTwo, 1000);
+      setTimeout(TimerTwo, 900);
     }
     setTimeout(Timer, 500);
   } else {
@@ -300,7 +299,6 @@ hangman.addEventListener('click', function(e) {
 
       function TimerTwo() {
         hangman.style.justifyContent = 'center';
-        console.log('hang');
       }
       setTimeout(TimerTwo, 1050);
     }
@@ -319,19 +317,19 @@ iss.addEventListener('click', function(e) {
     iss.style.justifyContent = 'space-between';
     iss.style.boxShadow =
       '0 6px 12px rgba(0, 0, 0, 0.23), 0 3px 6px rgba(0, 0, 0, 0.23)';
-      if (window.innerWidth >= '1101') {
-        iss.style.width = '1000px';
-      } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
-        iss.style.width = '800px';
-      } else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
-        iss.style.width = '650px';
-      } else if (window.innerWidth <= '700' && window.innerWidth >= '601') {
-        iss.style.width = '550px';
-      } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
-        iss.style.width = '450px';
-      } else if (window.innerWidth <= '500') {
-        iss.style.width = '320px';
-      }
+    if (window.innerWidth >= '1101') {
+      iss.style.width = '1000px';
+    } else if (window.innerWidth <= '1100' && window.innerWidth >= '901') {
+      iss.style.width = '800px';
+    } else if (window.innerWidth <= '900' && window.innerWidth >= '701') {
+      iss.style.width = '650px';
+    } else if (window.innerWidth <= '700' && window.innerWidth >= '601') {
+      iss.style.width = '550px';
+    } else if (window.innerWidth <= '600' && window.innerWidth >= '501') {
+      iss.style.width = '450px';
+    } else if (window.innerWidth <= '500') {
+      iss.style.width = '320px';
+    }
     function Timer() {
       if (window.innerWidth >= '701') {
         issText.classList.remove('animated', 'fadeOutRight');
@@ -346,7 +344,7 @@ iss.addEventListener('click', function(e) {
       function TimerTwo() {
         issCard.style.transform = 'rotateY(180deg)';
       }
-      setTimeout(TimerTwo, 1000);
+      setTimeout(TimerTwo, 900);
     }
     setTimeout(Timer, 500);
   } else {
