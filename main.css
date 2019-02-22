@@ -48,7 +48,6 @@ body {
   padding: 4px 10px;
   color: #171717;
   text-shadow: 0 0 5px #fff, 0 0 10px #171717;
-  /* text-shadow: 1px 1px 3px #171717; */
   transition: all 0.4s ease-in;
   cursor: pointer;
   font-size: 20px;
@@ -131,7 +130,6 @@ body {
 /* -------------------------PROJECTS-------------------------- */
 
 .projects {
-  /* background: linear-gradient(-45deg, rgb(252, 191, 25), rgb(255, 72, 163)); */
   background: linear-gradient(
     135deg,
     rgba(40, 133, 182, 1) 0%,
